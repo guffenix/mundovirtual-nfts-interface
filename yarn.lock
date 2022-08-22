@@ -1890,6 +1890,18 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@chakra-ui/icon@npm:1.1.11":
+  version: 1.1.11
+  resolution: "@chakra-ui/icon@npm:1.1.11"
+  dependencies:
+    "@chakra-ui/utils": 1.8.2
+  peerDependencies:
+    "@chakra-ui/system": ">=1.0.0"
+    react: ">=16.8.6"
+  checksum: a5167984899be18d2b5b3c2bbb4b8368e1bcd991474c4568523d083cbcf05e84442b903dcfb223e0879b9d3c8adeefdfd251e1538247f18bc4f978f7cb3449cf
+  languageName: node
+  linkType: hard
+
 "@chakra-ui/icon@npm:2.0.5":
   version: 2.0.5
   resolution: "@chakra-ui/icon@npm:2.0.5"
@@ -1899,6 +1911,19 @@ __metadata:
     "@chakra-ui/system": ">=1.0.0"
     react: ">=16.8.6"
   checksum: 92ea1f695b5dab49d27d6d8ac4267ae47df3cb099c077cc49a99b29b064bba3693e2fda0f7f0bfec79d7f73a493da1607a45596c67ffc9e19284c1d021bcfe66
+  languageName: node
+  linkType: hard
+
+"@chakra-ui/icons@npm:1.0.15":
+  version: 1.0.15
+  resolution: "@chakra-ui/icons@npm:1.0.15"
+  dependencies:
+    "@chakra-ui/icon": 1.1.11
+    "@types/react": ^17.0.0
+  peerDependencies:
+    "@chakra-ui/system": ">=1.0.0"
+    react: ">=16.8.6"
+  checksum: b63a640875451e66730c9e49812e38dfeaf877d1ea6da3d2a41709bf87f113138eea9f067d749dbd901bb4a2666c90ccfe539fde16f4102d4bc4b600e66b17b2
   languageName: node
   linkType: hard
 
@@ -2466,6 +2491,18 @@ __metadata:
     framesync: 5.3.0
     lodash.mergewith: 4.6.2
   checksum: a97bf839b6569c1b420825fcab4a0b9d599d0c3752839cd01d72f4b8c2191e32da72a10727a84f5b13784ee1985083412c98855c25a42427dfb28290f37e8214
+  languageName: node
+  linkType: hard
+
+"@chakra-ui/utils@npm:1.8.2":
+  version: 1.8.2
+  resolution: "@chakra-ui/utils@npm:1.8.2"
+  dependencies:
+    "@types/lodash.mergewith": 4.6.6
+    css-box-model: 1.2.1
+    framesync: 5.3.0
+    lodash.mergewith: 4.6.2
+  checksum: e92073d00e74b9946bcb7f038298312cd50954b905808ce2bce1e07f0f229a80891055a9f7beaa5d343ec23707f6af74cbf261134d52e2fcfc8d0d3d6bb610e1
   languageName: node
   linkType: hard
 
@@ -4182,6 +4219,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/react@npm:^17.0.0":
+  version: 17.0.48
+  resolution: "@types/react@npm:17.0.48"
+  dependencies:
+    "@types/prop-types": "*"
+    "@types/scheduler": "*"
+    csstype: ^3.0.2
+  checksum: b683fa33f751ced0b8c8715df9f40de15513c1d7ce66064a75cdfb8805cc913b0b214a2e7022ef0b724bd62a1e8651d040cd265dd0452bde03cca9b8e495742d
+  languageName: node
+  linkType: hard
+
 "@types/resolve@npm:0.0.8":
   version: 0.0.8
   resolution: "@types/resolve@npm:0.0.8"
@@ -4492,6 +4540,17 @@ __metadata:
   peerDependencies:
     react: ">=16.8"
   checksum: b7f3ad62812fb0d000c50447f5b22329ce03942cc681cf01038a450872f79252445083a7fb325c7daf2b4de1f6f89e0298a7a54e0cea0b05872c37d64492af8b
+  languageName: node
+  linkType: hard
+
+"@web3-react/injected-connector@npm:6.0.7":
+  version: 6.0.7
+  resolution: "@web3-react/injected-connector@npm:6.0.7"
+  dependencies:
+    "@web3-react/abstract-connector": ^6.0.7
+    "@web3-react/types": ^6.0.7
+    tiny-warning: ^1.0.3
+  checksum: 867a634a12326f33d10eead26f557fe505942ec42f5586d0756eb864fa345187b255a7d9b78bd555eb2395f962e9615731bcfefe6cf07ef9971a7fca151377f8
   languageName: node
   linkType: hard
 
@@ -21952,6 +22011,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "web3-ui-dapps-template@workspace:."
   dependencies:
+    "@chakra-ui/icons": 1.0.15
     "@chakra-ui/react": ^1.6.8
     "@emotion/react": ^11.4.1
     "@emotion/styled": ^11.3.0
@@ -21959,6 +22019,7 @@ __metadata:
     "@testing-library/react": ^11.1.0
     "@testing-library/user-event": ^12.1.10
     "@web3-react/core": ^6.1.9
+    "@web3-react/injected-connector": 6.0.7
     framer-motion: ^4.1.17
     react: ^17.0.2
     react-dom: ^17.0.2
