@@ -6,6 +6,7 @@ import {
   Button,
   Image,
   Badge,
+  useToast,
 } from '@chakra-ui/react'
 import { Link } from 'react-router-dom'
 import { useCallback, useEffect, useState } from 'react'
@@ -17,6 +18,9 @@ const Home = () => {
   const { active, account } = useWeb3React()
   const virtualitoNFTs = useHandleNfts()
   const [maxStock, setmaxStock] = useState()
+  const [isMinting, setIsMinting] = useState(false)
+
+  const toast = useToast()
 
   const getvirtualitoNFTsData = useCallback(async () => {
     if (virtualitoNFTs) {
@@ -38,6 +42,39 @@ const Home = () => {
   useEffect(() => {
     getvirtualitoNFTsData()
   }, [getvirtualitoNFTsData])
+
+  const mint = () => {
+    setIsMinting(true)
+
+    virtualitoNFTs.methods
+      .mint()
+      .send({
+        from: account,
+      })
+      .on('transactionHash', (txHash) => {
+        toast({
+          title: 'Transacción enviada',
+          description: txHash,
+          status: 'info',
+        })
+      })
+      .on('receipt', () => {
+        setIsMinting(false)
+        toast({
+          title: 'Transacción confirmada',
+          description: 'La transacción fue exitosa.',
+          status: 'success',
+        })
+      })
+      .on('error', (error) => {
+        setIsMinting(false)
+        toast({
+          title: 'Transacción fallida',
+          description: error.message,
+          status: 'error',
+        })
+      })
+  }
 
   return (
     <Stack
@@ -95,6 +132,8 @@ const Home = () => {
             bg={'purple.500'}
             _hover={{ bg: 'purple.400' }}
             disabled={!virtualitoNFTs}
+            onClick={mint}
+            isLoading={isMinting}
           >
             Obtén tu NFT
           </Button>
