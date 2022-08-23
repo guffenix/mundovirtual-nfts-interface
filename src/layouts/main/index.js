@@ -66,8 +66,14 @@ const MainLayout = ({ children }) => {
           <HStack spacing={8} alignItems={'center'}>
             <Flex alignItems="center">
               <Image src="./images/logo-svg.svg" width="52px" />
-              <Heading size="md" color="purple" mt={0.2} ml={1}>
-                MundoVirtual NFT's
+              <Heading
+                size="md"
+                color="purple"
+                mt={0.2}
+                ml={1}
+                display={{ xs: 'none' }}
+              >
+                Wolfcito NFT
               </Heading>
             </Flex>
             <HStack
