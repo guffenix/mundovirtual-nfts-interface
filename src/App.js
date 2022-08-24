@@ -1,7 +1,9 @@
 import { Route } from 'react-router-dom'
+import MainLayout from './layouts/main'
+
 import Home from './views/home'
 import Gallery from './views/gallery'
-import MainLayout from './layouts/main'
+import Card from './views/card'
 
 function App() {
   // simple way to handle login web3
@@ -16,6 +18,7 @@ function App() {
     <MainLayout>
       <Route path="/" exact component={Home} />
       <Route path="/gallery" exact component={Gallery} />
+      <Route path="/gallery/:tokenId" exact component={Card} />
     </MainLayout>
   )
 }
