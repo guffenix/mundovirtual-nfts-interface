@@ -179,7 +179,7 @@ const Home = () => {
             </Button>
           </>
         ) : (
-          <Badge mt={2}>Wallet desconectado</Badge>
+          <Badge mt={2}>Wallet desconectada</Badge>
         )}
       </Flex>
     </Stack>
