@@ -137,7 +137,7 @@ const Home = () => {
           >
             Obtén tu NFT
           </Button>
-          <Link to="/punks">
+          <Link to="/gallery">
             <Button rounded={'full'} size={'lg'} fontWeight={'normal'} px={6}>
               Galería
             </Button>
