@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useState } from 'react'
 import useHandleNfts from '../useHandleNfts'
 
-const getData = async ({ nftInstance, tokenId }) => {
+const getData = async ({ virtualitoNFTs, tokenId }) => {
   const [
     tokenURI,
     dna,
@@ -20,23 +20,23 @@ const getData = async ({ nftInstance, tokenId }) => {
     skinColor,
     topType,
   ] = await Promise.all([
-    nftInstance.methods.tokenURI(tokenId).call(),
-    nftInstance.methods.tokenDNA(tokenId).call(),
-    nftInstance.methods.ownerOf(tokenId).call(),
-    nftInstance.methods.getAccessoriesType(tokenId).call(),
-    nftInstance.methods.getAccessoriesType(tokenId).call(),
-    nftInstance.methods.getClotheColor(tokenId).call(),
-    nftInstance.methods.getClotheType(tokenId).call(),
-    nftInstance.methods.getEyeType(tokenId).call(),
-    nftInstance.methods.getEyeBrowType(tokenId).call(),
-    nftInstance.methods.getFacialHairColor(tokenId).call(),
-    nftInstance.methods.getFacialHairType(tokenId).call(),
-    nftInstance.methods.getHairColor(tokenId).call(),
-    nftInstance.methods.getHatColor(tokenId).call(),
-    nftInstance.methods.getGraphicType(tokenId).call(),
-    nftInstance.methods.getMouthType(tokenId).call(),
-    nftInstance.methods.getSkinColor(tokenId).call(),
-    nftInstance.methods.getTopType(tokenId).call(),
+    virtualitoNFTs.methods.tokenURI(tokenId).call(),
+    virtualitoNFTs.methods.tokenDNA(tokenId).call(),
+    virtualitoNFTs.methods.ownerOf(tokenId).call(),
+    virtualitoNFTs.methods.getAccessoriesType(tokenId).call(),
+    virtualitoNFTs.methods.getAccessoriesType(tokenId).call(),
+    virtualitoNFTs.methods.getClotheColor(tokenId).call(),
+    virtualitoNFTs.methods.getClotheType(tokenId).call(),
+    virtualitoNFTs.methods.getEyeType(tokenId).call(),
+    virtualitoNFTs.methods.getEyeBrowType(tokenId).call(),
+    virtualitoNFTs.methods.getFacialHairColor(tokenId).call(),
+    virtualitoNFTs.methods.getFacialHairType(tokenId).call(),
+    virtualitoNFTs.methods.getHairColor(tokenId).call(),
+    virtualitoNFTs.methods.getHatColor(tokenId).call(),
+    virtualitoNFTs.methods.getGraphicType(tokenId).call(),
+    virtualitoNFTs.methods.getMouthType(tokenId).call(),
+    virtualitoNFTs.methods.getSkinColor(tokenId).call(),
+    virtualitoNFTs.methods.getTopType(tokenId).call(),
   ])
 
   const responseMetadata = await fetch(tokenURI)
@@ -70,19 +70,19 @@ const getData = async ({ nftInstance, tokenId }) => {
 const useNftsData = () => {
   const [nfts, setNfts] = useState([])
   const [loading, setLoading] = useState(true)
-  const virtualitosNfts = useHandleNfts()
+  const virtualitoNFTs = useHandleNfts()
 
   const update = useCallback(async () => {
-    if (virtualitosNfts) {
+    if (virtualitoNFTs) {
       setLoading(true)
 
       let tokenIds
 
-      const totalSupply = await virtualitosNfts.methods.totalSupply().call()
+      const totalSupply = await virtualitoNFTs.methods.totalSupply().call()
       tokenIds = new Array(Number(totalSupply)).fill().map((_, index) => index)
 
       const nftPromise = tokenIds.map((tokenId) =>
-        getData({ tokenId, virtualitosNfts }),
+        getData({ virtualitoNFTs, tokenId }),
       )
 
       const customNfts = await Promise.all(nftPromise)
@@ -90,7 +90,7 @@ const useNftsData = () => {
       setNfts(customNfts)
       setLoading(false)
     }
-  }, [virtualitosNfts])
+  }, [virtualitoNFTs])
 
   useEffect(() => {
     update()
@@ -103,4 +103,31 @@ const useNftsData = () => {
   }
 }
 
-export { useNftsData }
+const useNftData = (tokenId = null) => {
+  const [nfts, setNfts] = useState([])
+  const [loading, setLoading] = useState(true)
+  const virtualitoNFTs = useHandleNfts()
+
+  const update = useCallback(async () => {
+    if (virtualitoNFTs && tokenId != null) {
+      setLoading(true)
+
+      const toSet = await getData({ virtualitoNFTs, tokenId })
+      setNfts(toSet)
+
+      setLoading(false)
+    }
+  }, [virtualitoNFTs, tokenId])
+
+  useEffect(() => {
+    update()
+  }, [update])
+
+  return {
+    loading,
+    nfts,
+    update,
+  }
+}
+
+export { useNftsData, useNftData }
