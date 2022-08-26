@@ -1,5 +1,6 @@
 import { useCallback, useEffect, useState } from 'react'
 import useHandleNfts from '../useHandleNfts'
+import { useWeb3React } from '@web3-react/core'
 
 const getData = async ({ virtualitoNFTs, tokenId }) => {
   const [
@@ -67,10 +68,11 @@ const getData = async ({ virtualitoNFTs, tokenId }) => {
 }
 
 // request for all nfts
-const useNftsData = () => {
+const useNftsData = ({ owner = null } = {}) => {
   const [nfts, setNfts] = useState([])
   const [loading, setLoading] = useState(true)
   const virtualitoNFTs = useHandleNfts()
+  const { library } = useWeb3React()
 
   const update = useCallback(async () => {
     if (virtualitoNFTs) {
@@ -78,8 +80,21 @@ const useNftsData = () => {
 
       let tokenIds
 
-      const totalSupply = await virtualitoNFTs.methods.totalSupply().call()
-      tokenIds = new Array(Number(totalSupply)).fill().map((_, index) => index)
+      if (!library.utils.isAddress(owner)) {
+        const totalSupply = await virtualitoNFTs.methods.totalSupply().call()
+        tokenIds = new Array(Number(totalSupply))
+          .fill()
+          .map((_, index) => index)
+      } else {
+        const balanceOf = await virtualitoNFTs.methods.balanceOf(owner).call()
+        const tokenIdsOfOwner = new Array(Number(balanceOf))
+          .fill()
+          .map((_, index) =>
+            virtualitoNFTs.methods.tokenOfOwnerByIndex(owner, index).call(),
+          )
+
+        tokenIds = await Promise.all(tokenIdsOfOwner)
+      }
 
       const nftPromise = tokenIds.map((tokenId) =>
         getData({ virtualitoNFTs, tokenId }),
@@ -90,7 +105,7 @@ const useNftsData = () => {
       setNfts(customNfts)
       setLoading(false)
     }
-  }, [virtualitoNFTs])
+  }, [virtualitoNFTs, owner, library?.utils])
 
   useEffect(() => {
     update()
@@ -104,7 +119,7 @@ const useNftsData = () => {
 }
 
 const useNftData = (tokenId = null) => {
-  const [nfts, setNfts] = useState([])
+  const [nfts, setNfts] = useState({})
   const [loading, setLoading] = useState(true)
   const virtualitoNFTs = useHandleNfts()
 
