@@ -1890,18 +1890,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@chakra-ui/icon@npm:1.1.11":
-  version: 1.1.11
-  resolution: "@chakra-ui/icon@npm:1.1.11"
-  dependencies:
-    "@chakra-ui/utils": 1.8.2
-  peerDependencies:
-    "@chakra-ui/system": ">=1.0.0"
-    react: ">=16.8.6"
-  checksum: a5167984899be18d2b5b3c2bbb4b8368e1bcd991474c4568523d083cbcf05e84442b903dcfb223e0879b9d3c8adeefdfd251e1538247f18bc4f978f7cb3449cf
-  languageName: node
-  linkType: hard
-
 "@chakra-ui/icon@npm:2.0.5":
   version: 2.0.5
   resolution: "@chakra-ui/icon@npm:2.0.5"
@@ -1914,16 +1902,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@chakra-ui/icons@npm:1.0.15":
-  version: 1.0.15
-  resolution: "@chakra-ui/icons@npm:1.0.15"
+"@chakra-ui/icons@npm:1.1.7":
+  version: 1.1.7
+  resolution: "@chakra-ui/icons@npm:1.1.7"
   dependencies:
-    "@chakra-ui/icon": 1.1.11
-    "@types/react": ^17.0.0
+    "@chakra-ui/icon": 2.0.5
+    "@types/react": ^17.0.15
   peerDependencies:
     "@chakra-ui/system": ">=1.0.0"
     react: ">=16.8.6"
-  checksum: b63a640875451e66730c9e49812e38dfeaf877d1ea6da3d2a41709bf87f113138eea9f067d749dbd901bb4a2666c90ccfe539fde16f4102d4bc4b600e66b17b2
+  checksum: c76dd4f7c9cf2eeecfdf82fc373c5eed27a51db5e52e5b360eeacb1660e1869d6f20fbb754c53f5e47ca8b37d80a0c8b60c188dce3ef976e8ba1fbb14e34d4c7
   languageName: node
   linkType: hard
 
@@ -2179,7 +2167,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@chakra-ui/react@npm:^1.6.8":
+"@chakra-ui/react@npm:^1.8.8":
   version: 1.8.8
   resolution: "@chakra-ui/react@npm:1.8.8"
   dependencies:
@@ -2494,18 +2482,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@chakra-ui/utils@npm:1.8.2":
-  version: 1.8.2
-  resolution: "@chakra-ui/utils@npm:1.8.2"
-  dependencies:
-    "@types/lodash.mergewith": 4.6.6
-    css-box-model: 1.2.1
-    framesync: 5.3.0
-    lodash.mergewith: 4.6.2
-  checksum: e92073d00e74b9946bcb7f038298312cd50954b905808ce2bce1e07f0f229a80891055a9f7beaa5d343ec23707f6af74cbf261134d52e2fcfc8d0d3d6bb610e1
-  languageName: node
-  linkType: hard
-
 "@chakra-ui/visually-hidden@npm:1.1.6":
   version: 1.1.6
   resolution: "@chakra-ui/visually-hidden@npm:1.1.6"
@@ -2625,7 +2601,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@emotion/react@npm:^11.4.1":
+"@emotion/react@npm:^11.10.0":
   version: 11.10.0
   resolution: "@emotion/react@npm:11.10.0"
   dependencies:
@@ -2668,7 +2644,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@emotion/styled@npm:^11.3.0":
+"@emotion/styled@npm:^11.10.0":
   version: 11.10.0
   resolution: "@emotion/styled@npm:11.10.0"
   dependencies:
@@ -3845,7 +3821,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@testing-library/jest-dom@npm:^5.11.4":
+"@testing-library/jest-dom@npm:^5.16.5":
   version: 5.16.5
   resolution: "@testing-library/jest-dom@npm:5.16.5"
   dependencies:
@@ -3862,7 +3838,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@testing-library/react@npm:^11.1.0":
+"@testing-library/react@npm:^11.2.7":
   version: 11.2.7
   resolution: "@testing-library/react@npm:11.2.7"
   dependencies:
@@ -3875,7 +3851,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@testing-library/user-event@npm:^12.1.10":
+"@testing-library/user-event@npm:^12.8.3":
   version: 12.8.3
   resolution: "@testing-library/user-event@npm:12.8.3"
   dependencies:
@@ -4219,7 +4195,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react@npm:^17.0.0":
+"@types/react@npm:^17.0.15":
   version: 17.0.48
   resolution: "@types/react@npm:17.0.48"
   dependencies:
@@ -9044,9 +9020,9 @@ __metadata:
   linkType: hard
 
 "electron-to-chromium@npm:^1.3.47, electron-to-chromium@npm:^1.3.564, electron-to-chromium@npm:^1.4.202":
-  version: 1.4.232
-  resolution: "electron-to-chromium@npm:1.4.232"
-  checksum: 6b2317fb2a348e7daf0ad840d683ed0283f72c1a03d3786486503c795cd732563d20ec9123a9d3eda937ee451a657b02a2e22777bfd8e8801d0b1780867d5782
+  version: 1.4.233
+  resolution: "electron-to-chromium@npm:1.4.233"
+  checksum: 5cf2bdad13a66453303891adaf1b8e4aa649b161309c51d41e65192958876042289fd73abdb7c75274ca903b86a26d9c71f20baad0575988255593a4be5e6905
   languageName: node
   linkType: hard
 
@@ -9524,8 +9500,8 @@ __metadata:
   linkType: hard
 
 "eslint-plugin-react@npm:^7.21.5":
-  version: 7.31.0
-  resolution: "eslint-plugin-react@npm:7.31.0"
+  version: 7.31.1
+  resolution: "eslint-plugin-react@npm:7.31.1"
   dependencies:
     array-includes: ^3.1.5
     array.prototype.flatmap: ^1.3.0
@@ -9543,7 +9519,7 @@ __metadata:
     string.prototype.matchall: ^4.0.7
   peerDependencies:
     eslint: ^3 || ^4 || ^5 || ^6 || ^7 || ^8
-  checksum: 465829bb477f3adf0ce96294c2b9c97147414a449d14f4dde21711f38213924a4facd567f7263be67958f284edf5ea25cf9f996bc95240d74cfa2ee95b1c81a6
+  checksum: 6217d4c4e36c8fea24facd0cdcf22b2fd38a3603db94ec7c0a6f430046c8564b6c6884e0a9d4a4b8766201f66e8b18af594002210421bf9b6623b1fc32e15a3a
   languageName: node
   linkType: hard
 
@@ -15199,6 +15175,30 @@ __metadata:
   languageName: node
   linkType: hard
 
+"mundovirtual-nfts@workspace:.":
+  version: 0.0.0-use.local
+  resolution: "mundovirtual-nfts@workspace:."
+  dependencies:
+    "@chakra-ui/icons": 1.1.7
+    "@chakra-ui/react": ^1.8.8
+    "@emotion/react": ^11.10.0
+    "@emotion/styled": ^11.10.0
+    "@testing-library/jest-dom": ^5.16.5
+    "@testing-library/react": ^11.2.7
+    "@testing-library/user-event": ^12.8.3
+    "@web3-react/core": ^6.1.9
+    "@web3-react/injected-connector": 6.0.7
+    framer-motion: ^4.1.17
+    react: ^17.0.2
+    react-dom: ^17.0.2
+    react-router-dom: ^5.3.3
+    react-scripts: 4.0.3
+    web-vitals: ^1.0.1
+    web3: ^1.5.3
+    web3-react: ^5.0.5
+  languageName: unknown
+  linkType: soft
+
 "nan@npm:^2.12.1, nan@npm:^2.13.2, nan@npm:^2.14.0":
   version: 2.16.0
   resolution: "nan@npm:2.16.0"
@@ -17810,13 +17810,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-error-overlay@npm:6.0.9":
-  version: 6.0.9
-  resolution: "react-error-overlay@npm:6.0.9"
-  checksum: 695853bc885e798008a00c10d8d94e5ac91626e8130802fea37345f9c037f41b80104345db2ee87f225feb4a4ef71b0df572b17c378a6d397b6815f6d4a84293
-  languageName: node
-  linkType: hard
-
 "react-error-overlay@npm:^6.0.9":
   version: 6.0.11
   resolution: "react-error-overlay@npm:6.0.11"
@@ -17910,7 +17903,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-router-dom@npm:^5.3.0":
+"react-router-dom@npm:^5.3.3":
   version: 5.3.3
   resolution: "react-router-dom@npm:5.3.3"
   dependencies:
@@ -22039,31 +22032,6 @@ __metadata:
   checksum: 672f5fbd08dfb783d8cfabd9c4eacf81dfe7b4910c18bd17ad8a7971a6b384bd48aa55bd787776e74a04154994f73fe924eb488f5c1199b35ae468db561c37c8
   languageName: node
   linkType: hard
-
-"web3-ui-dapps-template@workspace:.":
-  version: 0.0.0-use.local
-  resolution: "web3-ui-dapps-template@workspace:."
-  dependencies:
-    "@chakra-ui/icons": 1.0.15
-    "@chakra-ui/react": ^1.6.8
-    "@emotion/react": ^11.4.1
-    "@emotion/styled": ^11.3.0
-    "@testing-library/jest-dom": ^5.11.4
-    "@testing-library/react": ^11.1.0
-    "@testing-library/user-event": ^12.1.10
-    "@web3-react/core": ^6.1.9
-    "@web3-react/injected-connector": 6.0.7
-    framer-motion: ^4.1.17
-    react: ^17.0.2
-    react-dom: ^17.0.2
-    react-error-overlay: 6.0.9
-    react-router-dom: ^5.3.0
-    react-scripts: 4.0.3
-    web-vitals: ^1.0.1
-    web3: ^1.5.3
-    web3-react: ^5.0.5
-  languageName: unknown
-  linkType: soft
 
 "web3-utils@npm:1.2.11":
   version: 1.2.11
