@@ -1,5 +1,6 @@
 {
-  "name": "web3-ui-dapps-template",
+  "name": "mundovirtual-nfts",
+  "homepage": ".",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
