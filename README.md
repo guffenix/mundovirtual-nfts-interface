@@ -2,8 +2,15 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-This project contains libraries for design, navigation, and web3 handle
+It contains libraries for design, navigation, and web3
 ![Template dapps](images/template-dapp.png)
+
+App Deployed
+Centralized Front:
+[fleek](https://royal-sun-5569.on.fleek.co)
+
+Desentralized Front:
+[Ipfs](https://ipfs.fleek.co/ipfs/QmaeooHMyupPz8n8eSJ5NwkQVVxcFpP1RjCkiz5D2G47zC)
 
 ## Available Scripts
 
