@@ -24,6 +24,7 @@ const Gallery = () => {
 
   const [submitted, setSubmitted] = useState(true)
   const [validAddress, setValidAddress] = useState(true)
+
   const [address, setAddress] = useState(
     new URLSearchParams(search).get('address'),
   )
@@ -46,7 +47,7 @@ const Gallery = () => {
       setValidAddress(isValid)
       setSubmitted(true)
       if (isValid) {
-        push(`/gallery?address=${address}`)
+        push(`/nfts?address=${address}`)
       }
     } else {
       push('/gallery')
@@ -88,7 +89,7 @@ const Gallery = () => {
       ) : (
         <Grid templateColumns="repeat(auto-fill, minmax(250px, 1fr))" gap={6}>
           {nfts.map(({ name, image, tokenId }) => (
-            <Link key={tokenId} to={`/gallery/${tokenId}`}>
+            <Link key={tokenId} to={`/nft/${tokenId}`}>
               <PunkCard image={image} name={name} />
             </Link>
           ))}
