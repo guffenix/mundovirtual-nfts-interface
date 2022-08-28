@@ -12,6 +12,7 @@ import {
   Button,
   FormHelperText,
   FormControl,
+  Badge,
 } from '@chakra-ui/react'
 import { SearchIcon } from '@chakra-ui/icons'
 import { useState } from 'react'
@@ -80,7 +81,9 @@ const Gallery = () => {
             </InputRightElement>
           </InputGroup>
           {submitted && !validAddress && (
-            <FormHelperText>Dirección inválida</FormHelperText>
+            <FormHelperText mb={4}>
+              <Badge colorScheme="red">Dirección inválida</Badge>
+            </FormHelperText>
           )}
         </FormControl>
       </form>
