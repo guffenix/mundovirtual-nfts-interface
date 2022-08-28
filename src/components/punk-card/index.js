@@ -1,3 +1,4 @@
+import React from 'react'
 import { Box, useColorModeValue, Heading, Stack, Image } from '@chakra-ui/react'
 
 const PunkCard = ({ image, name, ...props }) => {

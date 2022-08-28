@@ -1,3 +1,4 @@
+import React from 'react'
 import { useWeb3React } from '@web3-react/core'
 import { useNftsData } from '../../hooks/useNftsData'
 import PunkCard from '../../components/punk-card'

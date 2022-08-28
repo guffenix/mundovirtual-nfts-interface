@@ -9,6 +9,7 @@ const useHandleNfts = () => {
 
   return useMemo(() => {
     if (active) return new library.eth.Contract(abi, address[chainId])
+    // eslint-disable-next-line
   }, [active, chainId, library?.eth?.Contract])
 }
 

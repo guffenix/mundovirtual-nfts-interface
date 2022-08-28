@@ -1,3 +1,4 @@
+import React, { useCallback, useEffect, useState } from 'react'
 import {
   Flex,
   Button,
@@ -10,7 +11,6 @@ import { AddIcon } from '@chakra-ui/icons'
 import { Link } from 'react-router-dom'
 import { UnsupportedChainIdError, useWeb3React } from '@web3-react/core'
 import { connector } from '../../../config/web3'
-import { useCallback, useEffect, useState } from 'react'
 import useTruncatedAddress from '../../../hooks/useTruncatedAddress'
 
 const WalletData = () => {
@@ -33,6 +33,7 @@ const WalletData = () => {
   const getBalance = useCallback(async () => {
     const toSet = await library.eth.getBalance(account)
     setBalance((toSet / 1e18).toFixed(2))
+    // eslint-disable-next-line
   }, [library?.eth, account])
 
   useEffect(() => {

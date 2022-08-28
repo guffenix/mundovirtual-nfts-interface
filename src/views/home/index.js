@@ -1,3 +1,4 @@
+import React, { useCallback, useEffect, useState } from 'react'
 import {
   Stack,
   Flex,
@@ -8,7 +9,6 @@ import {
   Badge,
   useToast,
 } from '@chakra-ui/react'
-import { useCallback, useEffect, useState } from 'react'
 import useHandleNfts from '../../hooks/useHandleNfts'
 import { useWeb3React } from '@web3-react/core'
 
@@ -108,8 +108,8 @@ const Home = () => {
         <Text color={'gray.500'}>
           Se trata de una colección de 10000 avatares únicos. Que representan
           simbólicamente a la lista de los cypherpunks de mundovirtual. Para
-          rendir homenaje este proyecto trata de trata defender la privacidad
-          con la criptografía. con firmas digitales, smart contracts y on-chain.
+          rendir homenaje este proyecto trata de defender la privacidad con la
+          criptografía, con firmas digitales, smart contracts y on-chain.
         </Text>
 
         <Text color={'gray.500'}>Qué esperas para ser parte cypherpunk?</Text>

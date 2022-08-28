@@ -105,6 +105,7 @@ const useNftsData = ({ owner = null } = {}) => {
       setNfts(customNfts)
       setLoading(false)
     }
+    // eslint-disable-next-line
   }, [virtualitoNFTs, owner, library?.utils])
 
   useEffect(() => {
