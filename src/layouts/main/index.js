@@ -22,6 +22,10 @@ const Links = [
     name: 'Gallery',
     to: '/gallery',
   },
+  {
+    name: 'About',
+    to: '/about',
+  },
 ]
 
 const MainLayout = ({ children }) => {
@@ -71,9 +75,9 @@ const MainLayout = ({ children }) => {
                 color="purple"
                 mt={0.2}
                 ml={1}
-                display={{ xs: 'none' }}
+                display={{ base: 'none', md: 'flex' }}
               >
-                Wolfcito NFT
+                MundoVirtual Collection
               </Heading>
             </Flex>
             <HStack
