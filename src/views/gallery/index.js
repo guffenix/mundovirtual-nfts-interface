@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { useWeb3React } from '@web3-react/core'
 import { useNftsData } from '../../hooks/useNftsData'
 import PunkCard from '../../components/punk-card'
@@ -16,7 +16,6 @@ import {
   Badge,
 } from '@chakra-ui/react'
 import { SearchIcon } from '@chakra-ui/icons'
-import { useState } from 'react'
 import { useHistory, useLocation, Link } from 'react-router-dom'
 
 const Gallery = () => {
@@ -28,7 +27,7 @@ const Gallery = () => {
   const [validAddress, setValidAddress] = useState(true)
 
   const [address, setAddress] = useState(
-    new URLSearchParams(search).get('address'),
+    new URLSearchParams(search).get('address')
   )
 
   const { loading, nfts } = useNftsData({
